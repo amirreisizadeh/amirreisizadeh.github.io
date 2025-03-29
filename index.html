@@ -1,131 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <!-- SEO -->
+    <title>Amir Reisizadeh's Homepage</title>
+    <meta property="og:locale" content="en-US">
+    <meta property="og:site_name" content="Amir Reisizadeh's Homepage">
+    <meta property="og:title" content="Amir Reisizadeh">
+    <meta property="og:url" content="https://amirreisizadeh.github.io/">
+    <meta property="og:description" content="About me">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amir Reisizadeh</title>
+    <!-- Styles -->
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f8f8;
             color: #333;
+            line-height: 1.6;
         }
-        .header {
-            text-align: center;
-            padding: 50px;
+        .masthead {
             background-color: #2c3e50;
-            color: white;
+            padding: 20px;
+            text-align: center;
         }
-        .container {
+        .masthead a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+        }
+        .masthead a:hover {
+            text-decoration: underline;
+        }
+        .main {
             display: flex;
             max-width: 1200px;
             margin: 20px auto;
-            gap: 20px;
         }
-        .left-column {
-            flex: 1;
-            text-align: center;
-        }
-        .left-column img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .right-column {
-            flex: 3;
-        }
-        .tab {
-            overflow: hidden;
-            border-bottom: 1px solid #ccc;
-            background-color: #fff;
-            text-align: center;
-        }
-        .tab button {
-            background-color: inherit;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 16px;
-        }
-        .tab button:hover {
-            background-color: #ddd;
-        }
-        .tab button.active {
-            background-color: #ccc;
-        }
-        .tabcontent {
-            display: none;
+        .sidebar {
+            width: 25%;
             padding: 20px;
-            background-color: white;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;
         }
-        .tabcontent.active {
+        .sidebar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
             display: block;
+            margin: 0 auto 10px;
+        }
+        .sidebar h3 {
+            margin: 10px 0;
+            text-align: center;
+            font-size: 20px;
+        }
+        .sidebar p {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        .sidebar .social-icons {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        .sidebar .social-icons li {
+            margin: 5px 0;
+        }
+        .sidebar .social-icons a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .sidebar .social-icons a:hover {
+            color: #2980b9;
+        }
+        .content {
+            width: 75%;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .content h2 {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        .content p, .content ul {
+            margin: 10px 0;
+        }
+        .content a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .content a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #eee;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Amir Reisizadeh</h1>
-        <p>Welcome to my personal website!</p>
+    <!-- Navigation -->
+    <div class="masthead">
+        <a href="https://amirreisizadeh.github.io/">Amir Reisizadeh's Homepage</a>
+        <a href="#bio">Bio</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </div>
 
-    <div class="container">
-        <div class="left-column">
-            <img src="/Amir_pic.jpg" alt="Amir Reisizadeh Photo">
-            <p>Amir Reisizadeh</p>
+    <!-- Main Content -->
+    <div class="main">
+        <!-- Sidebar with Photo -->
+        <div class="sidebar">
+            <img src="/Amir_pic.jpg" alt="Amir Reisizadeh">
+            <h3>Amir Reisizadeh</h3>
+            <p>Your Title/Position</p>
+            <ul class="social-icons">
+                <li><a href="mailto:your.email@example.com">Email</a></li>
+                <li><a href="https://github.com/amirreisizadeh">GitHub</a></li>
+                <li><a href="https://twitter.com/yourusername">Twitter</a></li>
+                <li><a href="https://linkedin.com/in/yourusername">LinkedIn</a></li>
+            </ul>
         </div>
-        <div class="right-column">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'Bio')" id="defaultOpen">Bio</button>
-                <button class="tablinks" onclick="openTab(event, 'Research')">Research</button>
-                <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
-                <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
-            </div>
 
-            <div id="Bio" class="tabcontent">
-                <h2>Bio</h2>
-                <p>Hi, I'm Amir Reisizadeh! This is where you can write about yourself—your background, interests, or anything else you'd like to share.</p>
-            </div>
+        <!-- Content Area -->
+        <div class="content">
+            <h1 id="bio">Bio</h1>
+            <p>Hi, I'm Amir Reisizadeh! This is where you can write about yourself—your background, education, current role, and interests.</p>
 
-            <div id="Research" class="tabcontent">
-                <h2>Research</h2>
-                <p>This is a placeholder for your research interests or projects. Feel free to list publications, topics, or ongoing work here.</p>
-            </div>
+            <h2 id="research">Research</h2>
+            <p>Describe your research interests or projects here. For example: "My research focuses on [topic], with an emphasis on [specific area]."</p>
 
-            <div id="Projects" class="tabcontent">
-                <h2>Projects</h2>
-                <p>Highlight your projects here. You can add links to GitHub repositories or descriptions of what you’ve built.</p>
-            </div>
+            <h2 id="projects">Projects</h2>
+            <p>List your projects here. You can include links to GitHub repositories or other work, like: <a href="https://github.com/amirreisizadeh">My GitHub</a>.</p>
 
-            <div id="Contact" class="tabcontent">
-                <h2>Contact</h2>
-                <p>Get in touch with me at: <a href="mailto:amir.reisizadeh@gmail.com">amir.reisizadeh@gmail.com</a></p>
-            </div>
+            <h2 id="contact">Contact</h2>
+            <p>Get in touch with me at: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
         </div>
     </div>
 
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-
-        // Open the "Bio" tab by default
-        document.getElementById("defaultOpen").click();
-    </script>
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 Amir Reisizadeh. Hosted on <a href="https://github.com">GitHub Pages</a>.</p>
+    </div>
 </body>
 </html>
