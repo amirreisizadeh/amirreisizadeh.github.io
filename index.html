@@ -22,10 +22,16 @@
         }
         .masthead {
             background-color: #fcfcfc;
-            padding: 20px;
-            text-align: left;
-            margin-left: 10%; /* Relative unit */
+            padding: 20px 0;
             border-bottom: 1px solid #e0e0e0;
+        }
+        .masthead-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 10%;
+            padding-right: 5%;
+            display: flex;
+            justify-content: flex-start;
         }
         .masthead a {
             color: #333;
@@ -40,7 +46,7 @@
             display: flex;
             max-width: 1200px;
             margin: 20px auto;
-            padding-left: 10%; /* Relative unit */
+            padding-left: 10%;
             padding-right: 5%;
         }
         .sidebar {
@@ -122,9 +128,12 @@
         /* Mobile adjustments */
         @media (max-width: 768px) {
             .masthead {
-                margin-left: 5%;
-                padding: 15px;
-                text-align: center;
+                padding: 15px 0;
+            }
+            .masthead-container {
+                padding-left: 5%;
+                padding-right: 5%;
+                justify-content: center;
             }
             .masthead a {
                 display: inline-block;
@@ -137,7 +146,7 @@
             }
             .sidebar {
                 width: 100%;
-                position: static; /* Remove sticky on mobile */
+                position: static;
                 padding: 10px;
             }
             .photo-container {
@@ -157,8 +166,10 @@
 </head>
 <body>
     <div class="masthead">
-        <a href="https://amirreisizadeh.github.io/">Home</a>
-        <a href="/research.html">Research & Publications</a>
+        <div class="masthead-container">
+            <a href="https://amirreisizadeh.github.io/">Home</a>
+            <a href="/research.html">Research & Publications</a>
+        </div>
     </div>
 
     <div class="main">
